@@ -30,6 +30,7 @@ nav {
   justify-content: center;
   padding: 0.5rem;
   gap: 0.5rem;
+  margin-bottom: 300px;
 }
 
 nav a {
@@ -86,33 +87,52 @@ a[aria-current='page']::after {
   width: 50%;
 }
 
-/* EPIC CLUB THING */
+/* ### EPIC CLUB THING */
 
 h1.clubname {
-  margin-top: 200px;
+  margin-top: 0px;
   margin-left: 2rem;
   font-size: 70px;
 }
 
 span.clubname-top {
+  text-shadow: 1px 1px 4px black;
   color: var(--gold);
+  /* font-weight: bolder; */
 }
 span.clubname-bottom {
+  position: relative;
+  left: 5px;
+  z-index: 3;
+  line-height: 0%;
+  text-shadow: 1px 1px 4px black;
   color: var(--maroon);
+  /* font-weight: bolder; */
 }
 
+span.clubname-w.default {
+  opacity: 0; 
+  transition: all, .3s, ease;
+}
+span.clubname-w.hidden {
+  opacity: 100;
+}
+/* trident */
 img.trident {
   position: absolute;
-  left: 0;
-  height: 500px;
+  left: 135px;
+  height: 170px;
+  animation: all, 1s, ease;
 }
 
 img.trident.default {
-  transform: translateX(-120px);
+  transform: translateX(-97px);
 }
 
 img.trident.up {
-  transform: translateY(100);
+  transform: translateX(-97px);
+  top: 400px;
+  z-index: 2;
 }
 /* ### SECTIONS BELOW */
 section {
