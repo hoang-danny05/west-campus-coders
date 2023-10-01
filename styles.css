@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --maroon: #990134;
+  --gold: #ffb130;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: #18181b;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* ### TOP NAV ELEMENT CONTAINER */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: inline-block;
+  /* this line makes it fit within the container!!! */
+  position: relative;
+  /* min-width: 9rem; */
+  padding-bottom: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+ul.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav a[aria-current='page'] {
+  color: #aaa;
+}
+
+/* ### BORDER UNDERLINE EFFECT */
+a::before,
+a::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0%;
+  background-color: var(--gold);
+  transition: all 0.5s ease;
+}
+
+a::before {
+  right: 50%;
+}
+a::after {
+  left: 50%;
+}
+
+/* only unselected links do the thing */
+a:not([aria-current='page']):hover::before,
+a:not([aria-current='page']):hover:after {
+  width: 50%;
+}
+
+a[aria-current='page']::before,
+a[aria-current='page']::after {
+  width: 50%;
+}
+
+/* EPIC CLUB THING */
+
+h1.clubname {
+  margin-top: 200px;
+  margin-left: 2rem;
+  font-size: 70px;
+}
+
+/* ### SECTIONS BELOW */
+section {
+  margin-top: 150px;
+}
