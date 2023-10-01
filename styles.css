@@ -94,6 +94,26 @@ h1.clubname {
   font-size: 70px;
 }
 
+span.clubname-top {
+  color: var(--gold);
+}
+span.clubname-bottom {
+  color: var(--maroon);
+}
+
+img.trident {
+  position: absolute;
+  left: 0;
+  height: 500px;
+}
+
+img.trident.default {
+  transform: translateX(-120px);
+}
+
+img.trident.up {
+  transform: translateY(100);
+}
 /* ### SECTIONS BELOW */
 section {
   margin-top: 150px;
