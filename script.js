@@ -1,16 +1,18 @@
 console.log('Hello!');
 
 const image = document.getElementById("trident");
+const w = document.getElementById("w")
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             console.log("true")
-            image.classList.add("up")
-        } else {
+            image.classList.add("up");
+            w.classList.add("animated");
+        } /*else {
             //for if you want it to replay
             console.log("false")
             image.classList.remove("up")
-        }
+        } */
     })
 })
 
@@ -22,5 +24,6 @@ const animate = () => {
 }
 
 // animate();
-const elements = document.querySelectorAll("span.clubname-bottom");
-elements.forEach((element) => observer.observe(element))
+const element = document.getElementById("checkpoint");
+observer.observe(element)
+// elements.forEach((element) => observer.observe(element))

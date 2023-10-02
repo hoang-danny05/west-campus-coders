@@ -110,29 +110,36 @@ span.clubname-bottom {
   /* font-weight: bolder; */
 }
 
-span.clubname-w.default {
-  opacity: 0; 
-  transition: all, .3s, ease;
-}
-span.clubname-w.hidden {
+/* w animation */
+span.clubname-w {
+  display: inline-block;
   opacity: 100;
+  rotate: 0deg;
+  /* transition: all .3s ease-out; */
+  transition-property: opacity, rotate, transform;
+  transition-duration: 1s, 3s, .5s;
+  transition-timing-function: ease-out;
+  transition-delay:.5s;
+}
+span.clubname-w.animated {
+  opacity: 0; 
+  transform: translateX(-60px) translateY(-180px);
+  cursor: pointer;
+  rotate: -55deg;
 }
 /* trident */
 img.trident {
   position: absolute;
   left: 135px;
   height: 170px;
-  animation: all, 1s, ease;
-}
-
-img.trident.default {
   transform: translateX(-97px);
+  z-index: 2;
+  transition: all 1s ease;
 }
 
 img.trident.up {
-  transform: translateX(-97px);
-  top: 400px;
-  z-index: 2;
+  /* top: 400px; */
+  transform: translateY(-340px) translateX(-97px);
 }
 /* ### SECTIONS BELOW */
 section {
