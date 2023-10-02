@@ -89,13 +89,23 @@ a[aria-current='page']::after {
 
 /* ### EPIC CLUB THING */
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  /* border: 1px solid white; */
+}
 h1.clubname {
+  /* text-align: center; */
   margin-top: 0px;
   margin-left: 2rem;
   font-size: 70px;
 }
 
 span.clubname-top {
+  position: relative;
   text-shadow: 1px 1px 4px black;
   color: var(--gold);
   /* font-weight: bolder; */
@@ -112,6 +122,7 @@ span.clubname-bottom {
 
 /* w animation */
 span.clubname-w {
+  position: relative;
   display: inline-block;
   opacity: 100;
   rotate: 0deg;
@@ -139,7 +150,7 @@ img.trident {
 
 img.trident.up {
   /* top: 400px; */
-  transform: translateY(-340px) translateX(-97px);
+  transform: translateY(-320px) translateX(-97px);
 }
 /* ### SECTIONS BELOW */
 section {
